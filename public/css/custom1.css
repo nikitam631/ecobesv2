@@ -1,0 +1,418 @@
+/* CSS
+Website Name:
+Author: Nikita
+Version: 1.0
+*/
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+.plr-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.mlr-0{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.pr-0 {
+  padding-right: 0px;
+}
+
+.pl-0 {
+  padding-left: 0px;
+}
+
+.p-0 {
+  padding: 13px;
+}
+
+.mt-6 {
+  margin-top: 6px;
+}
+
+.mt-19 {
+  margin-top: 19px;
+}
+
+.mt-50m {
+  margin-top: -50px;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.mt-55 {
+  margin-top: 55px;
+}
+
+.pt-55 {
+  padding-top: 55px;
+}
+
+.pt-35 {
+  padding-top: 35px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.plr-100 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.fs-16 {
+  font-size: 16px;
+}
+
+.pad {
+  padding: 20px;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.floater {
+  position: absolute;
+}
+
+.shadow {
+  box-shadow: 0 0 38px rgba(41, 49, 64, 0.07);
+}
+
+.inline {
+  display: inline-flex;
+}
+
+
+/* for underline to headings */
+
+.heading {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.heading:after {
+  content: '';
+  width: 44px;
+  border: 1px solid #333;
+  position: absolute;
+  top: 139%;
+  left: 0;
+}
+
+
+/* social icons colors */
+
+.bg-fb {
+  background-color: #3A559F;
+}
+
+.bg-tweet {
+  background-color: #1da1f2;
+}
+
+.bg-google {
+  background-color: #dd4b39;
+}
+
+
+/* common text colours */
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-black {
+  color: #000000;
+}
+
+.bg-lightgrey {
+  background-color: #f5f5f5;
+}
+
+.bg-darkgrey {
+  background-color: #e4e4e4;
+}
+
+
+/* change according to the website theme */
+
+.row-head {
+  margin-bottom: 22px;
+}
+
+.btn-red {
+  background-color: #ae100f;
+  color: white;
+}
+
+.btn-theme {
+  border-radius: 30px;
+  background-color: #81986e;
+  border: 1px solid #81986e;
+  color: #ffffff;
+  transition: 0.5s;
+  padding: 4px 20px;
+  font-size: 16px;
+}
+
+.btn-theme:hover {
+  background-color: #81986e;
+  border: 1px solid #81986e;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.text-red {
+  color: #d83f87;
+}
+
+.text-blue {
+  color: #30CFBE
+}
+
+.bg-blue {
+  background-color: #30CFBE;
+  color: white;
+}
+
+.bg-green {
+  background-color: #b6d0a0;
+}
+
+.text-green {
+  color: #b6d0a0;
+}
+
+
+/* --------------------------single page banner css */
+
+.banner-head {
+  background-image: url('../myimages/banner.jpg');
+  background-size: cover;
+}
+
+.banner-head .breadcrumb {
+  background-color: transparent;
+  padding: 0 2px;
+}
+
+.banner-head .breadcrumb a {
+  color: #333;
+  transition: 0.5s;
+}
+
+.banner-head .breadcrumb a:hover {
+  color: #d83f87;
+  transition: 0.5s;
+}
+
+
+/*
+======================================
+Single HEADER
+======================================
+*/
+
+.single-header {
+  padding: 0px;
+  color: white;
+}
+
+.single-header ol li a {
+  color: white;
+}
+
+.single-header h2 {
+  margin-top: 10px;
+}
+
+.breadcrumb {
+  margin-bottom: 10px;
+}
+
+
+/*---------------------------top bar css*/
+
+
+/*---------------------------navbar css*/
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 0px;
+  border: none;
+}
+
+.navbar-default {
+}
+
+.navbar-default .navbar-nav>li>a {
+}
+
+.navbar-brand {
+  padding: 0
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+.username-n{
+  text-transform: uppercase;
+}
+
+
+
+/* dropdown css */
+
+.custom-navbar-n .dropdown:hover>.dropdown-menu {
+  display: block;
+  top: 40px;
+  left: -5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0px 0px;
+  min-width: 205px;
+}
+
+.custom-navbar-n .dropdown-menu>li>a {
+  display: block;
+  padding: 7px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #ae100f;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+
+/*-------------------carousel css*/
+
+.carousel-control.left {
+  background-image: none!important;
+}
+
+.carousel-control.right {
+  background-image: none!important;
+}
+
+/* login form css----------------------------------------------- */
+.login-form-n{
+  background-color: white;
+  padding: 40px;
+  margin-top: 10%;
+}
+.login-form-n .form-control{
+    color: #293140;
+    border-color: #f6f7fb;
+    background-color: #f6f7fb;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 22px;
+}
+
+/* main section css------------------------- */
+.login-menu-n{
+  text-transform: uppercase;
+  text-align: center;
+}
+.register-menu-n{
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* post box css */
+.post-box-n textarea{
+
+}
+
+/* display post css */
+.post{
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.user-image-n img{
+  border: 50%;
+}
+.dp-row4-n{
+  background-color: #ccc;
+}
+
+/* NM Css */
+
+
+/* ====================================
+Service Page
+==================================== */
+/*
+.service-nav li {
+  padding: 9px;
+  color: #ffffff;
+  font-size: 17px;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.service-nav li.active {
+  color: #ffffff;
+  background: #81986E;
+  transition: 0.5s;
+  border-radius: 0;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.service-nav li:hover {
+  color: #ffffff;
+  background: #81986E;
+  transition: 0.5s;
+  border-radius: 0;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+} */
+
+.breadcrumb>.active {
+  color: #fff;
+}
+
+
+/*
+====================================
+FOOTER
+====================================
+*/
+
+footer p {
+  margin: 0
+}
+
+footer a,
+footer a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+@media only screen and (max-width:500px) {}
