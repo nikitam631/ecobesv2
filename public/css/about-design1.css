@@ -1,0 +1,79 @@
+h1{
+  margin-top: 5px;
+    margin-bottom: 22px;
+    font-size: 70px;
+}
+p{
+  font-size: 30px;
+  text-align: justify;
+}
+.about-top{
+   background-color: #f3f3f3;
+   padding: 3px;
+}
+.about-top img{
+  margin: auto;
+  width: 8%;
+  margin-top: -15px;
+  margin-bottom: -15px;
+}
+.about-top-heading{
+  color: #043000;
+  font-weight: bold;
+}
+
+.about-banner{
+  background-image: url('../img/icons/bg/about-cover.jpg');
+  background-size: cover;
+  padding: 190px 100px 35px 95px;
+  background-position: center;
+}
+.about-banner .banner-box{
+  background: white;
+  opacity: 0.7;
+  padding: 10px;
+  border-radius: 10px;
+}
+.about-banner .banner-box .text-center{
+  font-weight: bold;
+  font-size: 25px;
+}
+.about-banner .banner-box .mission{
+  text-transform: uppercase;
+  line-height: 30px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+}
+.about-box, .artistry-box, .about-team-box, .testimonial-box{
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.about-box .bg-green,
+.artistry-box .bg-green,
+.about-team-box .bg-green,
+.testimonial-box .bg-green{
+  padding: 22px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.bg-green{
+  background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 42px;
+}
+.about-team-box .team-member img{
+  margin: auto;
+  width: 30%;
+}
+
+.about-page-bottom{
+  background-image: url('../img/icons/bg/footer.png');
+  padding: 100px;
+}
+
+.about-page-bottom h3{
+  color: white;
+  font-weight: bold;
+}
