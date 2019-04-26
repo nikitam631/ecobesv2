@@ -52,10 +52,11 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">MISSION</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SERVICES</a></li>
-            <li><a href="#">TEAM</a></li>
+
+            <li><a href="#about-services-n">ABOUT</a></li>
+            <li><a href="#service-n">SERVICES</a></li>
+            <li><a href="#team-n">TEAM</a></li>
+            <li><a href="#contactsec">CONTACT</a></li>
           </ul>
         </div>
       </div>
@@ -67,35 +68,46 @@
   <div class="container-fluid mission-section">
     <h1 class="text-center">Welcome to Eco-Bes</h1>
     <div class="row">
-      <div class="col-md-4 bg-green mission-box">
-        <h2 class="text-center">Mission</h2>
-        <p class="text-center">"Empowerment Through Wisdom, to encourage environmental resilience across the globe."</p>
+      <div class="col-md-8 col-md-offset-2 mission-box">
+
+        <p class="text-center"><i class="fa fa-quote-left"></i> Empowerment Through Wisdom, to encourage environmental resilience across the globe. <i class="fa fa-quote-right"></i> </p>
+        <h2>-Our Mission</h2>
       </div>
     </div>
   </div>
   <!-- MISSION SECTION -->
 
   <!-- ABOUT SECTION -->
-  <section class="about-services-n">
+  <section class="about-services-n" id="about-services-n">
     <div class="container text-center">
       <div class="row">
         <div class="col-md-12">
           <h1>About Us</h1>
           <p>Our mission is what drives us to take this enterprising path to Inspire, Motivate and at the same time educate people of all ages across the globe, to become consciously aware and well informed about the current and predicted Global  climatic and environmental status. This we strongly believe has the potential to help in building and establishing an unified perspective about the urgency and need for sustainable development practices followed by actions.</p>
-          <p><b>“We are the first generation to feel the effect of climate change and the last generation who can do something about it”-Barack Obama</b></p>
+          <p><b>“We are the first generation to feel the effect of climate change and the last generation who can do something about it” <br> -Barack Obama</b></p>
           <br>
-          <br><br>
-          <h1>Services</h1>
-          <p>Unlike social media, we are an exclusive Environment related infotainment and media platform for you, to Connect, Discuss and Share the knowledge and information which might positively or negatively or is currently impacting  the environment and everyone on it, for others to take a note of. Our service portfolio which is due launch soon, aims to help every segment of the audience and  aspire to be instrumental in providing a considerable push to growing  momentum towards Global sustainability and sustainable development .</p>
-          <p><b>“We must be the change, we wish to see in the world”- Mahatma Gandhi</b></p>
+
+
         </div>
       </div>
     </div>
   </section>
   <!-- ABOUT SECTION -->
 
+  <section class="service-sec-n" id="service-n">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Services</h1>
+          <p> We are an exclusive Environment related infotainment and media platform for you, to Connect, Discuss and Share the knowledge and information which might positively or negatively or is currently impacting  the environment and everyone on it, for others to take a note of. Our service portfolio which is due launch soon, aims to help every segment of the audience and  aspire to be instrumental in providing a considerable push to growing  momentum towards Global sustainability and sustainable development .</p>
+          <p><b>“We must be the change, we wish to see in the world”- Mahatma Gandhi</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- TESTIMONIAL SECTION -->
-  <section class="testimonial-section">
+  <section class="testimonial-section" id="team-n">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -105,23 +117,21 @@
               <div class="item active">
                 <div class="container">
                   <div class="row">
-                    <div class="col-md-4">
+                    {{-- <div class="col-md-4">
                       <img src="https://justatic.com/v/20190211135732/shared/images/icons/placeholders/profile.png" alt="" class="img-responsive">
                       <h3>Kamaljit Deka</h3>
                       <h3>Fouder & CEO</h3>
-                    </div>
-                    <div class="col-md-7">
-                      <p>Kamaljit deka is the Founder and CEO of Ecobes Technologies Pvt Ltd. An Ex-Employee of world’s biggest
-Ed-Tech firm Byju’s , Kamal has a professional experience of 3+ Years and he is currently heading the
-Strategy &amp; Operations of Eco-Bes. As an employee, Kamal with his creative initiatives and management
-skills, has always played a key role in developing systems, which improved the overall productivity
-efficiency and of the team and the company he worked in. </p>
-                      <p>After finishing schooling from his hometown Guwahati, Kamal persued his B.Tech in Automobile Engg.
-from Manipal Institute of Technology, Karnataka in the Batch of 2016 and then began his professional
-career from Bangalore.</p>
-                      <p>Inspite of the fact that People do not like change, Kamal is attempting to bring one because he believes
-that “Changes are uncomfortable but often necessary for the greater good of everyone and everything
-around including themselves.”</p>
+                    </div> --}}
+                    <div class="col-md-8 col-md-offset-2">
+                      <p>Chandan is Co-Founder and Director of Ecobes Technologies Pvt Ltd. He spent his career as a
+government employee in the public services. Being a people person, he has always been dedicated
+towards promoting the idea and importance of sustainable development to improve human lives and
+protect the environment. He advocates the fact that sustainable development in the 21st century is not
+an option but an imperative.</p>
+<p>He strongly believes that education and awareness needs to be the first step towards building a resilient
+mindset and understand the importance of the imminent shift towards sustainable development.</p>
+<br>
+<h4 class="text-white text-center"><span>Chandan Chandra Deka,</span> Director</h4>
                     </div>
                   </div>
                 </div>
@@ -129,13 +139,15 @@ around including themselves.”</p>
               <div class="item ">
                 <div class="container">
                   <div class="row">
-                    <div class="col-md-4 col-md-offset-1">
-                      <img src="https://cdn1.iconfinder.com/data/icons/technology-devices-2/100/Profile-512.png" alt="" class="img-responsive">
-                      <h3>Kamaljit Deka</h3>
-                      <h3>Fouder & CEO</h3>
-                    </div>
-                    <div class="col-md-5">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="col-md-8 col-md-offset-2">
+                      <p>Samarth with his remarkable experience in Sales and his creative initiatives and management skills, has
+always played a key role in developing systems, which improved the overall productivity as well as
+efficiency of the team and the company he worked in. Samarth persued his B.Tech in Automobile Engg.
+from Manipal Institute of Technology, Karnataka and then began his professional career from Bangalore.</p>
+<p>Samarth firmly believes that working on the strengths and mastering it is a more constructive and
+efficient option that pondering upon the weaknesses.</p>
+<br>
+<h4 class="text-white text-center"><span>Samarth Shah,</span> Head of Business Development</h4>
                     </div>
                   </div>
                 </div>
@@ -160,14 +172,14 @@ around including themselves.”</p>
   <!-- TESTIMONIAL SECTION -->
 
   <!-- CONTACT SECTION -->
-  <section class="contact-section">
+  <section class="contact-section" id="contactsec">
     <div class="container text-center">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <h1>Contact</h1>
           <p>Address: Maligaon, Guwahati, Assam</p>
-          <p>Email: kamal@ecobes.in</p>
-          <p>Phone:9886528671</p>
+          <p>Email: support@ecobes.in</p>
+          <p>Phone: 7337729021</p>
         </div>
       </div>
     </div>
@@ -185,6 +197,14 @@ around including themselves.”</p>
           <i class="fa fa-twitter"></i>
           <i class="fa fa-linkedin"></i>
           <i class="fa fa-instagram"></i>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-9 text-right">
+          Read our Policies and T&C
+          <a href="{{ url('img/Website-Privacy-Refund-Policy_Complete.pdf') }}">
+            here
+          </a>
         </div>
       </div>
     </div>

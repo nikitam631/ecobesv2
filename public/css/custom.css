@@ -842,6 +842,10 @@ padding-top: 0px;
   width: 90%;
   border-radius: 8px;
 }
+.taskbody{
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
 .socialbtnslike-n{
   width: 12.5%;
   margin-left: 3%;

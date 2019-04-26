@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-md-10 pl-0 poststatus-n">
                   <p class="name">{{task.user.name}} <span class="time">{{task.created_at | myOwnTime }}</span></p>
-                  <p>{{task.body}}</p>
+                  <p class="taskbody">{{task.body}} </p>
                   <img v-if="task.image" :src="'/img/' + task.image" alt="" class="img-responsive">
                 </div>
               </div>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="col-md-10 pl-0 poststatus-n">
                   <p class="name">{{task.user.name}} <span class="time">{{task.created_at | myOwnTime }}</span></p>
-                  <p>{{task.body}}</p>
+                  <p class="taskbody">{{task.body}}</p>
                   <img v-if="task.image" :src="'/img/' + task.image" alt="" class="img-responsive" width="80px" height="80px;">
                 </div>
               </div>
@@ -165,7 +165,7 @@
       },
         data(){
           return {
-
+            message: '',
             blog:[],
             tasks:[],
             trendingtasks:[],
@@ -322,7 +322,7 @@
                   this.tasks.unshift(response.data);
                   this.task.body='';
                   console.log(response);
-
+                  this.message= 'Success';
                 })
                 .catch(function(error){
                   console.log(error);

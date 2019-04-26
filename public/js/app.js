@@ -43557,7 +43557,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
   data: function data() {
     return {
-
+      message: '',
       blog: [],
       tasks: [],
       trendingtasks: [],
@@ -43713,6 +43713,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         _this5.tasks.unshift(response.data);
         _this5.task.body = '';
         console.log(response);
+        _this5.message = 'Success';
       }).catch(function (error) {
         console.log(error);
       });
@@ -43904,7 +43905,9 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _c("p", [_vm._v(_vm._s(task.body))]),
+                      _c("p", { staticClass: "taskbody" }, [
+                        _vm._v(_vm._s(task.body) + " ")
+                      ]),
                       _vm._v(" "),
                       task.image
                         ? _c("img", {
@@ -44083,7 +44086,9 @@ var render = function() {
                         ])
                       ]),
                       _vm._v(" "),
-                      _c("p", [_vm._v(_vm._s(task.body))]),
+                      _c("p", { staticClass: "taskbody" }, [
+                        _vm._v(_vm._s(task.body))
+                      ]),
                       _vm._v(" "),
                       task.image
                         ? _c("img", {

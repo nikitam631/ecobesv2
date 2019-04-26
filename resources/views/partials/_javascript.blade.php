@@ -6,11 +6,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <!-- EMOJI PICKER -->
 <script src="./js/emojiPicker.min.js"></script>
+<script src="https://raw.githubusercontent.com/alexcorvi/anchorme.js/gh-pages/dist-browser/anchorme.min.js" charset="utf-8"></script>
+<script src="./js/autolink.js"></script>
+
+<script type="text/javascript">
+jQuery(function ($) {
+  $('.taskbody').autolink();
+});
+</script>
+
 <script>
   (() => {
     new EmojiPicker()
   })()
 </script>
+
 <script type="text/javascript">
     $('.dropdown').click(function(){
       $(this).find('ul').toggle();

@@ -4,6 +4,9 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+.text-white{
+  color: #ffffff;
+}
 .about-top{
   background-color: transparent;
    padding: 5px;
@@ -11,10 +14,12 @@
 }
 .about-top .inline{
   background: white;
-  opacity: 0.7
+  opacity: 0.7;
+  border-radius: 4px;
 }
 .about-top .col-md-2{
   width: 13%;
+  margin-left: -8%;
 }
 .about-top .img-responsive{
   height: 85px;
@@ -41,13 +46,13 @@
   background-size: cover;
   padding: 100px;
   padding-top: 0;
-  padding-bottom: 150px;
+  padding-bottom: 165px;
   background-position: bottom;
 }
 .about-banner .tagline{
   color: white;
   text-align: center;
-  margin-top: 130px;
+  margin-top: 205px;
   font-size: 55px;
 }
 .navbar-green{
@@ -63,23 +68,31 @@
   color: white;
   font-size: 25px;
   padding: 10px 35px;
+  transition: 0.5s;
 }
 .nav>li>a:focus, .nav>li>a:hover{
-  background: transparent
+  background: transparent;
+  font-size: 27px;
+  transition: 0.5s;
+  font-weight: 700;
 }
 .mission-section{
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   padding-bottom: 40px;
 }
 .mission-box{
-  padding: 30px 40px 70px 40px;
+  padding: 42px 40px 0px 40px;
+}
+.mission-box .fa{
+  font-size: 48px;
 }
 .mission-box h2{
-  font-size: 45px;
+  font-size: 25px;
     margin-bottom: 30px;
+    text-align: center;
 }
 .mission-box p{
-  font-size: 21px;
+  font-size: 43px;
 }
 .bg-green{
   background: #92c46d;
@@ -89,6 +102,7 @@
 .about-services-n{
   padding-top: 20px;
   padding-bottom: 82px;
+  background-color: #f2f2f2;
 }
 .about-services-n h1{
   margin-bottom: 30px;
@@ -96,12 +110,23 @@
 .about-services-n p{
   font-size: 20px;
 }
+.service-sec-n{
+  background-color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 82px;
+}
+.service-sec-n p{
+  font-size: 20px;
+}
+.service-sec-n h1{
+  margin-bottom: 30px;
+}
 .carousel-control {
     width: 3%;
 }
 .testimonial-section{
   background-color: #333;
-  padding: 50px;
+  padding: 40px 80px 80px;
 }
 .testimonial-section .item img{
   margin: auto;
@@ -115,7 +140,12 @@
 }
 .testimonial-section .item p{
   color: white;
-  text-align: justify;
+  text-align: center;
+  font-size: 18px;
+}
+.testimonial-section .item h4 span{
+  font-size: 20px;
+  font-weight: 700;
 }
 .carousel-control{
   background-image: none !important;
