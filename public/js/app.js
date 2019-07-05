@@ -43549,6 +43549,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
@@ -43560,7 +43564,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       message: '',
       blog: [],
       tasks: [],
+      alltasks: [],
       trendingtasks: [],
+      moreMsgFetched: false,
 
       task: {
         likeCount: 0,
@@ -43687,7 +43693,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       var _this4 = this;
 
       axios.get('/getPosts').then(function (response) {
-        _this4.tasks = response.data;
+
+        _this4.alltasks = response.data;
+        _this4.tasks = _this4.alltasks.splice(0, 7);
+
         Vue.filter('myOwnTime', function (value) {
           return moment(value).calendar();
         });
@@ -43706,6 +43715,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.log(error);
       });
     },
+
+
+    handleButton: function handleButton() {
+      // if(!this.moreMsgFetched){
+      //     axios.get('/getPosts').then((response) => {
+      //       this.alltasks = response.data;
+      //       this.tasks = this.alltasks.splice(0, 3);
+      //       this.moreMsgFetched = true;
+      //       console.log(this.moreMsgFetched);
+      //       console.log(this.tasks);
+      //     });
+      // }
+      // var nextMsgs = this.alltasks.splice(0, 10);
+      // //if you wnt to add 10 more messages to messages array
+      // this.tasks.push(nextMsgs);
+
+    },
+
     create: function create() {
       var _this5 = this;
 
@@ -43841,184 +43868,201 @@ var render = function() {
             staticClass: "scroll-div-n tab-pane fade in active",
             attrs: { id: "recents" }
           },
-          _vm._l(_vm.tasks, function(task) {
-            return _c(
-              "div",
-              {
-                key: task.id,
-                staticClass: "recentbox text-left ",
-                attrs: { task: task }
-              },
-              [
-                _c("div", [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "dropdown dbz",
-                      on: {
-                        click: function($event) {
-                          $event.preventDefault()
-                          _vm.myfunc()
+          [
+            _vm._l(_vm.tasks, function(task) {
+              return _c(
+                "div",
+                {
+                  key: task.id,
+                  staticClass: "recentbox text-left ",
+                  attrs: { task: task }
+                },
+                [
+                  _c("div", [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "dropdown dbz",
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            _vm.myfunc()
+                          }
                         }
-                      }
-                    },
-                    [
-                      _vm._m(1, true),
-                      _vm._v(" "),
-                      _c("ul", { staticClass: "dropdown-menu dbzm" }, [
-                        _c("li", [
-                          _c(
-                            "a",
-                            {
-                              attrs: { href: "" },
-                              on: {
-                                click: function($event) {
-                                  $event.preventDefault()
-                                  _vm.remove(task)
+                      },
+                      [
+                        _vm._m(1, true),
+                        _vm._v(" "),
+                        _c("ul", { staticClass: "dropdown-menu dbzm" }, [
+                          _c("li", [
+                            _c(
+                              "a",
+                              {
+                                attrs: { href: "" },
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    _vm.remove(task)
+                                  }
                                 }
-                              }
-                            },
-                            [
-                              _c("small", [_vm._v("Delete")]),
-                              _vm._v(" "),
-                              _c("i", { staticClass: "fa fa-trash-o" })
-                            ]
-                          )
+                              },
+                              [
+                                _c("small", [_vm._v("Delete")]),
+                                _vm._v(" "),
+                                _c("i", { staticClass: "fa fa-trash-o" })
+                              ]
+                            )
+                          ])
                         ])
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col-md-2 image-col-n" }, [
-                      _c("img", {
-                        staticClass: "img-responsive img-circle",
-                        attrs: { src: "/img/" + task.user.pic, alt: "" }
-                      })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-md-2 image-col-n" }, [
+                        _c("img", {
+                          staticClass: "img-responsive img-circle",
+                          attrs: { src: "/img/" + task.user.pic, alt: "" }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "col-md-10 pl-0 poststatus-n" },
+                        [
+                          _c("p", { staticClass: "name" }, [
+                            _vm._v(_vm._s(task.user.name) + " "),
+                            _c("span", { staticClass: "time" }, [
+                              _vm._v(
+                                _vm._s(_vm._f("myOwnTime")(task.created_at))
+                              )
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "taskbody" }, [
+                            _vm._v(_vm._s(task.body) + " ")
+                          ]),
+                          _vm._v(" "),
+                          task.image
+                            ? _c("img", {
+                                staticClass: "img-responsive",
+                                attrs: { src: "/img/" + task.image, alt: "" }
+                              })
+                            : _vm._e()
+                        ]
+                      )
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-md-10 pl-0 poststatus-n" }, [
-                      _c("p", { staticClass: "name" }, [
-                        _vm._v(_vm._s(task.user.name) + " "),
-                        _c("span", { staticClass: "time" }, [
-                          _vm._v(_vm._s(_vm._f("myOwnTime")(task.created_at)))
-                        ])
-                      ]),
+                    _c("div", { staticClass: "row bottom-buttons" }, [
+                      task.likes
+                        ? _c(
+                            "div",
+                            { staticClass: "col-md-6 col-sm-3 col-xs-3" },
+                            [
+                              _c("span", { staticClass: "all-likes" }, [
+                                _vm._v(_vm._s(task.likes.length))
+                              ])
+                            ]
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
-                      _c("p", { staticClass: "taskbody" }, [
-                        _vm._v(_vm._s(task.body) + " ")
-                      ]),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "col-md-2 col-sm-3 col-xs-3 socialbtnslike-n"
+                        },
+                        [
+                          _c("span", { staticClass: "like" }, [
+                            _c(
+                              "a",
+                              {
+                                attrs: { href: "" },
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    _vm.likeIt(task)
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                    Like\n                  "
+                                )
+                              ]
+                            )
+                          ])
+                        ]
+                      ),
                       _vm._v(" "),
-                      task.image
-                        ? _c("img", {
-                            staticClass: "img-responsive",
-                            attrs: { src: "/img/" + task.image, alt: "" }
-                          })
-                        : _vm._e()
+                      _c(
+                        "div",
+                        {
+                          staticClass: "col-md-2 col-sm-3 col-xs-3 socialbtns-n"
+                        },
+                        [
+                          _c("span", { staticClass: "dislike" }, [
+                            _c(
+                              "a",
+                              {
+                                attrs: { href: "" },
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                    Dislike\n                  "
+                                )
+                              ]
+                            )
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "col-md-2 col-sm-3 col-xs-3 socialbtns-n"
+                        },
+                        [
+                          _c("span", { staticClass: "share" }, [
+                            _c(
+                              "a",
+                              {
+                                attrs: { href: "" },
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                    Share\n                  "
+                                )
+                              ]
+                            )
+                          ])
+                        ]
+                      )
                     ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "row bottom-buttons" }, [
-                    task.likes
-                      ? _c(
-                          "div",
-                          { staticClass: "col-md-6 col-sm-3 col-xs-3" },
-                          [
-                            _c("span", { staticClass: "all-likes" }, [
-                              _vm._v(_vm._s(task.likes.length))
-                            ])
-                          ]
-                        )
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col-md-2 col-sm-3 col-xs-3 socialbtnslike-n"
-                      },
-                      [
-                        _c("span", { staticClass: "like" }, [
-                          _c(
-                            "a",
-                            {
-                              attrs: { href: "" },
-                              on: {
-                                click: function($event) {
-                                  $event.preventDefault()
-                                  _vm.likeIt(task)
-                                }
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                    Like\n                  "
-                              )
-                            ]
-                          )
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-md-2 col-sm-3 col-xs-3 socialbtns-n"
-                      },
-                      [
-                        _c("span", { staticClass: "dislike" }, [
-                          _c(
-                            "a",
-                            {
-                              attrs: { href: "" },
-                              on: {
-                                click: function($event) {
-                                  $event.preventDefault()
-                                }
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                    Dislike\n                  "
-                              )
-                            ]
-                          )
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass: "col-md-2 col-sm-3 col-xs-3 socialbtns-n"
-                      },
-                      [
-                        _c("span", { staticClass: "share" }, [
-                          _c(
-                            "a",
-                            {
-                              attrs: { href: "" },
-                              on: {
-                                click: function($event) {
-                                  $event.preventDefault()
-                                }
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                    Share\n                  "
-                              )
-                            ]
-                          )
-                        ])
-                      ]
-                    )
                   ])
-                ])
-              ]
+                ]
+              )
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-green form-control loadmorebutton",
+                on: { click: _vm.handleButton }
+              },
+              [_vm._v("Load more")]
             )
-          }),
-          0
+          ],
+          2
         ),
         _vm._v(" "),
         _c(

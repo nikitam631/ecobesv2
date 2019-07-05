@@ -42,8 +42,8 @@
         </li>
         @endif
         @if (Auth::guest())
-          <li><a href="{{ route('login') }}">Login</a></li>
-          <li><a href="{{ route('register') }}">Register</a></li>
+          <li class="btn btn-green effect-nm"><a href="{{ route('login') }}">Login</a></li>
+          <li class="btn btn-green effect-nm"><a href="{{ route('register') }}">Register</a></li>
         @endif
 
 

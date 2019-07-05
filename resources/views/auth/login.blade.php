@@ -62,6 +62,17 @@
                                 </a> --}}
                             </div>
                         </div>
+                        <div class="form-group">
+                          <div class="col-md-8 col-md-offset-4">
+                            <a href="#">
+                              <img src="{{asset('img/facebook.png')}}" alt="" class="login-options">
+                            </a>
+                            <a href="#">
+                              <img src="{{asset('img/google.png')}}" alt="" class="login-options" style="width:5.6%">
+                            </a>
+                          </div>
+                        </div>
+
                     </form>
                 </div>
             </div>

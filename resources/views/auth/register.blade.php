@@ -49,6 +49,8 @@
 
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
+                                <option value="female">Others</option>
+                                <option value="female">Do not want to specify</option>
                               </select>
 
                                 @if ($errors->has('gender'))

@@ -88,6 +88,10 @@
             </div>
 
           </div>
+          <!-- Load More -->
+          <button class="btn btn-green form-control loadmorebutton" @click="handleButton">Load more</button>
+
+
         </div>
         <!-- RECENT SECTION END -->
 
@@ -168,8 +172,9 @@
             message: '',
             blog:[],
             tasks:[],
+            alltasks:[],
             trendingtasks:[],
-
+            moreMsgFetched: false,
 
             task:{
               likeCount:0,
@@ -291,9 +296,13 @@
 
           // get all posts
           fetchData(){
+
             axios.get('/getPosts')
                 .then(response => {
-                  this.tasks = response.data;
+
+                  this.alltasks = response.data;
+                  this.tasks = this.alltasks.splice(0, 7);
+
                   Vue.filter('myOwnTime', function(value){
                      return moment(value).calendar();
                    });
@@ -315,6 +324,23 @@
                       console.log(error);
                     });
           },
+
+          handleButton: function () {
+            // if(!this.moreMsgFetched){
+            //     axios.get('/getPosts').then((response) => {
+            //       this.alltasks = response.data;
+            //       this.tasks = this.alltasks.splice(0, 3);
+            //       this.moreMsgFetched = true;
+            //       console.log(this.moreMsgFetched);
+            //       console.log(this.tasks);
+            //     });
+            // }
+            // var nextMsgs = this.alltasks.splice(0, 10);
+            // //if you wnt to add 10 more messages to messages array
+            // this.tasks.push(nextMsgs);
+
+        },
+
 
           create(){
             axios.post('/posts',this.task)

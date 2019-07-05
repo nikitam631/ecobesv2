@@ -18,7 +18,7 @@ body{
   background-repeat: no-repeat;
   background-position: top;
   background-color: #e1e0df;
-  background-size: contain;
+  background-size: auto;
 }
 
 .plr-0 {
@@ -275,9 +275,6 @@ Single HEADER
   margin-top: 13px;
 }
 
-.navbar-default .navbar-nav>li>a {
-}
-
 .navbar-brand {
   padding: 0
 }
@@ -404,6 +401,26 @@ Single HEADER
   color: white;
   font-weight: bold;
 }
+.effect-nm{
+  border-radius: 20px;
+  box-shadow: 0px 5px 5px #c7c7c7;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 7px;
+}
+.effect-nm a{
+  padding: 1px!important;
+  color: #ffffff;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.navbar-default .navbar-nav>li>a:hover{
+  transition: 0.5s;
+  color: #585858;
+}
+.login-options{
+  width: 7.7%;
+}
 /*
 ================================================================================ EDIT PROFILE PAGE
 */
@@ -433,7 +450,7 @@ Single HEADER
 }
 
 .edit-page-form-sec{
-  background: white;
+  background-image: url('../img/edit-profile.png');
     /* margin: 10px; */
     margin-top: 10px;
     border-radius: 10px;
@@ -839,7 +856,7 @@ padding-top: 0px;
   margin: auto;
 }
 .poststatus-n img{
-  width: 90%;
+  width: 100%;
   border-radius: 8px;
 }
 .taskbody{
@@ -852,6 +869,11 @@ padding-top: 0px;
 }
 .socialbtns-n{
   width: 16%;
+}
+.show-more{
+  cursor: pointer;
+  padding: 6px;
+  margin-bottom: 10px;
 }
 /*
 ================================================================================ PROFILE PAGE
