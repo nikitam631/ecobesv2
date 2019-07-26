@@ -55,6 +55,10 @@
                 <div class="col-md-10 pl-0 poststatus-n">
                   <p class="name">{{task.user.name}} <span class="time">{{task.created_at | myOwnTime }}</span></p>
                   <p class="taskbody">{{task.body}} </p>
+                  
+                </div>
+                <div class="col-md-12 pl-0 poststatus-n">
+                  
                   <img v-if="task.image" :src="'/img/' + task.image" alt="" class="img-responsive">
                 </div>
               </div>
@@ -70,13 +74,13 @@
                     </a>
                   </span>
                 </div>
-                <div class="col-md-2 col-sm-3 col-xs-3 socialbtns-n">
+                <!-- <div class="col-md-2 col-sm-3 col-xs-3 socialbtns-n">
                   <span class="dislike">
                     <a href="" @click.prevent="">
                       Dislike
                     </a>
                   </span>
-                </div>
+                </div> -->
                 <div class="col-md-2 col-sm-3 col-xs-3 socialbtns-n">
                   <span class="share">
                     <a href="" @click.prevent="">
@@ -89,7 +93,7 @@
 
           </div>
           <!-- Load More -->
-          <button class="btn btn-green form-control loadmorebutton" @click="handleButton">Load more</button>
+          <!--<button class="btn btn-green form-control loadmorebutton" @click="handleButton">Load more</button> -->
 
 
         </div>
@@ -118,6 +122,10 @@
                 <div class="col-md-10 pl-0 poststatus-n">
                   <p class="name">{{task.user.name}} <span class="time">{{task.created_at | myOwnTime }}</span></p>
                   <p class="taskbody">{{task.body}}</p>
+                 
+                </div>
+                <div class="col-md-12 pl-0 poststatus-n">
+                  
                   <img v-if="task.image" :src="'/img/' + task.image" alt="" class="img-responsive" width="80px" height="80px;">
                 </div>
               </div>
@@ -133,13 +141,13 @@
                     </a>
                   </span>
                 </div>
-                <div class="col-md-2 col-sm-3 col-xs-3">
+                <!-- <div class="col-md-2 col-sm-3 col-xs-3">
                   <span class="dislike">
                     <a href="" @click.prevent="">
                       Dislike
                     </a>
                   </span>
-                </div>
+                </div> -->
                 <div class="col-md-2 col-sm-3 col-xs-3">
                   <span class="share">
                     <a href="" @click.prevent="">
